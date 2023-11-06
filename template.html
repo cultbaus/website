@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang=en>
+    <title>cultbaus - %%TITLE%%</title>
+    <meta charset=utf-8>
+    <meta name=Description content="">
+    <meta name=viewport content="width=device-width,initial-scale=1">
+    <style>
+        body{
+            width: 768px;
+            overflow-y: scroll;
+            font:16px monospace, monospace;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            padding: 25vh 0;
+            div {
+                flex-grow: 1;
+            }
+        }
+        header {
+            display: flex;
+            flex-direction: column;
+        }
+        footer {
+            display: flex;
+        }
+        pre {
+            margin: 0;
+            overflow-x: hidden
+        }
+        a:link, a:visited {
+            color: #56c8ff;
+        }
+        @media(max-width:999px) {
+            body{
+                font-size:1.94vw
+            }
+        }
+        span {
+            display:inline-block
+        }
+    </style>
+    <body>
+        <div style>
+            <header>
+                <a href="/" style="text-decoration:none;color:black">CULTBAUS</a>
+                <nav>
+                    <a href="/">home</a>
+                    <a href="/blog">blog</a>
+                    <a href="/projects">projects</a>
+                    <a href="/contact">contact</a>
+                </nav>
+            </header>
+            <br />
+            <section>
+                <pre>
+                    %%CONTENT%%
+                </pre>
+            </section>
+        </div>
+        <footer>
+            <span style="image-rendering:crisp-edges;vertical-align:sub">
+                <a href=https://github.com/cultbaus>
+                    <img id=g alt=GitHub src="data:image/gif;base64,R0lGODlhEAAQAPABAAAAAP//ACH5BAUIAAEALAAAAAAQABAAAAIojA2px6G/GJzgJASxbrI+jmVgGI3TSF4oZS6emmqw823dTFcWbklNAQA7">
+                </a>
+            </span>
+        </footer>
+    </body>
+</html>

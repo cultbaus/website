@@ -1,0 +1,51 @@
+#!/bin/bash
+
+USER=${GITHUB_USER:-cultbaus}
+PROJECTS_DIR=${PROJECTS_DIRECTORY:-site/projects}
+URL=https://github.com/${USER}
+
+function die {
+    printf '%s\n' "$@"
+    exit 1
+}
+function exists {
+    command -v "$1" >/dev/null
+}
+function write_commits {
+    local repo="$1"
+    local out="${PROJECTS_DIR}/${repo}.txt"
+
+    printf '\n' >> $out
+    printf 'history\n' >> $out
+    printf -- '-------\n' >> $out
+    printf '<span style="display:block;max-height:200px;overflow:hidden scroll">\n' >> $out
+    git -C "${PROJECTS_DIR}/$repo" log \
+        --date=short \
+        --pretty="format:%cd <a href=\"${URL}/${repo}/commit/%H\">%h</a> %s" \
+        >> $out
+    printf '\n</span>' >> $out
+}
+function update_repos {
+    local repo="$1"
+
+    if [ ! -d "$PROJECTS_DIR/$repo" ]; then
+        git clone ${URL}/${repo}.git "${PROJECTS_DIR}/${repo}"
+    else
+        (cd "${PROJECTS_DIR}/$repo" && git pull)
+    fi
+}
+function main {
+    ! exists git && die 'git is required'
+    ! exists jq && die 'jq is required'
+
+    mkdir -p $PROJECTS_DIR
+    repos=$(curl -s "https://api.github.com/users/$USER/repos" | jq -r '.[].name')
+
+    for repo in $repos; do
+        update_repos $repo
+        cat "${PROJECTS_DIR}/${repo}/README" > "${PROJECTS_DIR}/${repo}.txt"
+        write_commits $repo
+        rm -rf ${PROJECTS_DIR}/${repo}
+    done
+}
+main
