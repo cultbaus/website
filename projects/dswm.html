@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang=en>
+    <title>cultbaus - dswm</title>
+    <meta charset=utf-8>
+    <meta name=description content="cultbaus is a software engineer and writer of mediocre blog posts">
+    <meta name=viewport content="width=device-width,initial-scale=1">
+    <style>
+        body{
+            width: 768px;
+            background: #ffffff;
+            color: #121212;
+            overflow-y: scroll;
+            font:16px monospace, monospace;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            padding: 25vh 0;
+            div {
+                flex-grow: 1;
+            }
+        }
+        header {
+            display: flex;
+            flex-direction: column;
+        }
+        footer {
+            display: flex;
+        }
+        pre {
+            margin: 0;
+            overflow-x: hidden
+        }
+        a:link, a:visited {
+            color: #56c8ff;
+        }
+        @media(max-width:999px) {
+            body{
+                font-size:1.94vw
+            }
+        }
+        @media(prefers-color-scheme: dark) {
+            body {
+                background: #121212;
+                color: #ffffff;
+            }
+            #github-icon {
+                filter: invert(1);
+            }
+        }
+        span {
+            display:inline-block
+        }
+    </style>
+    <body>
+        <div style>
+            <header>
+                <a href="/" style="text-decoration:none;color:black">CULTBAUS</a>
+                <nav>
+                    <a href="/">home</a>
+                    <a href="/blog">blog</a>
+                    <a href="/projects">projects</a>
+                    <a href="/contact">contact</a>
+                </nav>
+            </header>
+            <br />
+            <section>
+                <pre>
+dswm - window manager
+---------------------
+dswm is a dead simple (tiling) window manager
+
+features
+--------
+- one layout
+- one screen
+- workspaces
+- keybindings
+
+requirements
+------------
+- xcb
+- xcb-util
+- xcb-util-keysyms
+
+installation
+------------
+- edit config.mk
+- doas make clean install
+
+configure
+---------
+- edit keybindings in wm.h
+- edit options in config.h
+
+history
+-------
+<span style="display:block;max-height:200px;overflow:hidden scroll">
+2023-11-05 <a href="https://github.com/cultbaus/dswm/commit/96563fb93e3b20f3af8bde760af2dc589cca2e2a">96563fb</a> Updates cursor
+2023-11-03 <a href="https://github.com/cultbaus/dswm/commit/fbe360f8c292ec148efb897ec45932c28ce69c82">fbe360f</a> Renames wm -> dsm
+2023-11-03 <a href="https://github.com/cultbaus/dswm/commit/87883fdbc66ed11e5ebb48c472a6c572a0a40156">87883fd</a> Adds uninstall target
+2023-11-03 <a href="https://github.com/cultbaus/dswm/commit/e5fed0107b4b17722de7be894c1818b0d4eb254c">e5fed01</a> Updates README
+2023-11-02 <a href="https://github.com/cultbaus/dswm/commit/2332946d3a2c764c52ef2952eab1ef54c1b1da5c">2332946</a> Use list_contains
+2023-11-02 <a href="https://github.com/cultbaus/dswm/commit/5f0aba221eae3a81676b9bfc76b53ff8db3724ad">5f0aba2</a> Fixes focus change
+2023-11-02 <a href="https://github.com/cultbaus/dswm/commit/b6418ecd2eca0cbf93e45b945797bf8feb7fe636">b6418ec</a> Adds spawn action
+2023-11-02 <a href="https://github.com/cultbaus/dswm/commit/824a604f779175c1b70ec25ceeaa804f3f27928f">824a604</a> Adds focus jumping
+2023-11-02 <a href="https://github.com/cultbaus/dswm/commit/964adc7759cc90ea8ffcbcea4202d922b62c1781">964adc7</a> Remove debug flag
+2023-11-02 <a href="https://github.com/cultbaus/dswm/commit/f0c903217b5257831d1e9b71def41d068cc24423">f0c9032</a> Updates REAME
+2023-11-02 <a href="https://github.com/cultbaus/dswm/commit/893a8010f6d92668485f322ff3d8b052e2776ad6">893a801</a> Refactor
+2023-10-29 <a href="https://github.com/cultbaus/dswm/commit/d575b53386758a8e203905a2d39638633e4ab386">d575b53</a> Adds workspaces
+2023-10-28 <a href="https://github.com/cultbaus/dswm/commit/c671f841b70b0bfc5bbc4554503c70a03bf44152">c671f84</a> Adds key_press listener
+2023-10-28 <a href="https://github.com/cultbaus/dswm/commit/866423d9d3225e86ae91d72ce2e7fd35102fd5de">866423d</a> Prepare for multi-workspaces
+2023-10-28 <a href="https://github.com/cultbaus/dswm/commit/05d469bdf4a0b9d560a9fdbb2d88b1b3201bcfdb">05d469b</a> Updates README
+2023-10-28 <a href="https://github.com/cultbaus/dswm/commit/415690ce66ef4d56570ec903726ce91f7c8a3779">415690c</a> Add gaps and borders
+2023-10-28 <a href="https://github.com/cultbaus/dswm/commit/6b5ec534777d76a9afce42fc5a70fc443a3d6eee">6b5ec53</a> Updates formatting
+2023-10-28 <a href="https://github.com/cultbaus/dswm/commit/498f29dc2efc31a50161c863c13c0b59226036b6">498f29d</a> Refactors into workspace-oriented events
+2023-10-28 <a href="https://github.com/cultbaus/dswm/commit/0efb029195b5c98f859c2ffdcf9dc9696c7a8170">0efb029</a> Adds destroy/remove workspace handler
+2023-10-27 <a href="https://github.com/cultbaus/dswm/commit/ad3fb188266801b62cfbbda2f81e5a644c079684">ad3fb18</a> Adds workspace struct and simple resize
+2023-10-27 <a href="https://github.com/cultbaus/dswm/commit/da836a3227e2b25245553475a96dfe9f046fc180">da836a3</a> Adds event loop
+</span>                </pre>
+            </section>
+        </div>
+        <footer>
+            <span style="image-rendering:crisp-edges;vertical-align:sub">
+                <a href=https://github.com/cultbaus>
+                    <img id=github-icon alt=GitHub src="data:image/gif;base64,R0lGODlhEAAQAPABAAAAAP//ACH5BAUIAAEALAAAAAAQABAAAAIojA2px6G/GJzgJASxbrI+jmVgGI3TSF4oZS6emmqw823dTFcWbklNAQA7">
+                </a>
+            </span>
+        </footer>
+    </body>
+</html>

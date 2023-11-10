@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang=en>
+    <title>cultbaus - dotfiles</title>
+    <meta charset=utf-8>
+    <meta name=description content="cultbaus is a software engineer and writer of mediocre blog posts">
+    <meta name=viewport content="width=device-width,initial-scale=1">
+    <style>
+        body{
+            width: 768px;
+            background: #ffffff;
+            color: #121212;
+            overflow-y: scroll;
+            font:16px monospace, monospace;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            padding: 25vh 0;
+            div {
+                flex-grow: 1;
+            }
+        }
+        header {
+            display: flex;
+            flex-direction: column;
+        }
+        footer {
+            display: flex;
+        }
+        pre {
+            margin: 0;
+            overflow-x: hidden
+        }
+        a:link, a:visited {
+            color: #56c8ff;
+        }
+        @media(max-width:999px) {
+            body{
+                font-size:1.94vw
+            }
+        }
+        @media(prefers-color-scheme: dark) {
+            body {
+                background: #121212;
+                color: #ffffff;
+            }
+            #github-icon {
+                filter: invert(1);
+            }
+        }
+        span {
+            display:inline-block
+        }
+    </style>
+    <body>
+        <div style>
+            <header>
+                <a href="/" style="text-decoration:none;color:black">CULTBAUS</a>
+                <nav>
+                    <a href="/">home</a>
+                    <a href="/blog">blog</a>
+                    <a href="/projects">projects</a>
+                    <a href="/contact">contact</a>
+                </nav>
+            </header>
+            <br />
+            <section>
+                <pre>
+
+history
+-------
+<span style="display:block;max-height:200px;overflow:hidden scroll">
+2023-11-09 <a href="https://github.com/cultbaus/dotfiles/commit/7a3db80102abc8150545a6e1267b51ff2c700ef2">7a3db80</a> Updates VOID readme
+2023-11-07 <a href="https://github.com/cultbaus/dotfiles/commit/428d63477003ffebd6a13088674bbf4cafca893b">428d634</a> Adds config, shell updates
+2023-11-06 <a href="https://github.com/cultbaus/dotfiles/commit/22a10dbbee3271ea1c767be1badd1c785e273376">22a10db</a> updates bashrc/profile, readme
+2023-11-05 <a href="https://github.com/cultbaus/dotfiles/commit/a09ccccd6948c2c0096fe0e7e534e82e1b92d32d">a09cccc</a> Updates font, adds secrets
+2023-11-03 <a href="https://github.com/cultbaus/dotfiles/commit/98fab4a9f579327422e12f1148dc0e53db667636">98fab4a</a> Adds dotfiles
+</span>                </pre>
+            </section>
+        </div>
+        <footer>
+            <span style="image-rendering:crisp-edges;vertical-align:sub">
+                <a href=https://github.com/cultbaus>
+                    <img id=github-icon alt=GitHub src="data:image/gif;base64,R0lGODlhEAAQAPABAAAAAP//ACH5BAUIAAEALAAAAAAQABAAAAIojA2px6G/GJzgJASxbrI+jmVgGI3TSF4oZS6emmqw823dTFcWbklNAQA7">
+                </a>
+            </span>
+        </footer>
+    </body>
+</html>
