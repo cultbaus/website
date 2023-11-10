@@ -1,10 +1,10 @@
-#!/bin/sh -e
+#!/bin/bash
 
 #
 # Simple static site builder.
 #
 
-function text2Html() {
+function text2Html {
     # Transform plain-text input into HTML and insert it into the template.
     # Right now this only does some URL transformations.
 
@@ -33,7 +33,7 @@ function text2Html() {
     sed -E "s	%%TITLE%%	${2:-home}	"
 }
 
-page() {
+function page {
     pp=${1%/*}
     title=${1##*/}
     title=${title%%.txt}
@@ -49,7 +49,7 @@ page() {
 }
 
 
-main() {
+function main {
     rm -rf out && mkdir -p out
     (cd site && find . ! -type d) |
     while read -r page; do
