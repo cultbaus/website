@@ -1,25 +1,10 @@
-dotfiles
---------
-os:     void
-editor: nvim
-shell:  bash
-wm:     dswm[1]
-term:   st
-
-colors
-------
-#181818
-#E0E0E0
-
-outlook
--------
-grim
-
-[1]: https://github.com/cultbaus/dswm
 
 history
 -------
 <span style="display:block;max-height:200px;overflow:hidden scroll">
+2023-11-09 <a href="https://github.com/cultbaus/dotfiles/commit/7a3db80102abc8150545a6e1267b51ff2c700ef2">7a3db80</a> Updates VOID readme
+2023-11-07 <a href="https://github.com/cultbaus/dotfiles/commit/428d63477003ffebd6a13088674bbf4cafca893b">428d634</a> Adds config, shell updates
+2023-11-06 <a href="https://github.com/cultbaus/dotfiles/commit/22a10dbbee3271ea1c767be1badd1c785e273376">22a10db</a> updates bashrc/profile, readme
 2023-11-05 <a href="https://github.com/cultbaus/dotfiles/commit/a09ccccd6948c2c0096fe0e7e534e82e1b92d32d">a09cccc</a> Updates font, adds secrets
 2023-11-03 <a href="https://github.com/cultbaus/dotfiles/commit/98fab4a9f579327422e12f1148dc0e53db667636">98fab4a</a> Adds dotfiles
 </span>

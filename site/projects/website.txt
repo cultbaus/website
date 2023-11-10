@@ -11,5 +11,5 @@ prior art
 history
 -------
 <span style="display:block;max-height:200px;overflow:hidden scroll">
-2023-11-06 <a href="https://github.com/cultbaus/website/commit/9a27d8e24c018d08bc079977b7bdd68e89cfb063">9a27d8e</a> initial commit
+2023-11-06 <a href="https://github.com/cultbaus/website/commit/fe25eed26d459749a52190f7fa3aafff3a88db6e">fe25eed</a> initial commit
 </span>
